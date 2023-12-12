@@ -12,7 +12,7 @@
 	border-radius: 50%;
 	object-fit: cover;
 }
-.userDetail {
+.userDetails {
 	display: flex;
 	flex-direction: column;
 }
@@ -28,4 +28,23 @@
 	font-weight: bold;
 	font-size: 13px;
 	margin: 10px 0;
+}
+.logout {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	padding: 20px;
+	margin: 5px 0;
+	border-radius: 10px;
+	background: none;
+	border: none;
+	color: white;
+	width: 100%;
+}
+
+@media screen and (hover:hover) {
+	.logout:hover {
+		background-color: #2e374a;
+	}
 }

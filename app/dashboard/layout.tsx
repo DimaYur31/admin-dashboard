@@ -10,8 +10,8 @@ const Layout:({children,}: {children: React.ReactNode})=> React.ReactNode = ({ch
 			</div>
 			<div className={styles.content} >
 				<Navbar/>
-			</div>
 			{children}
+			</div>
 		</div>
   );
 }
