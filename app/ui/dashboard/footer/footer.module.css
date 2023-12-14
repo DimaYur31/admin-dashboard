@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 30px;
+	color: var(--textSoft);
+}
+.container p {
+	font-weight: bold;
+}
+.container span {
+	font-size: 12px;
+}
