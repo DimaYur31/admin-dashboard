@@ -1,0 +1,35 @@
+.container {
+	background-color: var(--bgSoft);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+.container form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.container form :is(input, textarea, select) {
+	padding: 30px;
+	background-color: var(--bg);
+	color: var(--text);
+	border: 2px solid #2e374a;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.container form :is(input, select) {
+	width: 45%;
+}
+.container form textarea {
+	width: 100%;
+	min-height: 100px;
+}
+.container form button {
+	width: 100%;
+	padding: 30px;
+	background-color: teal;
+	color: var(--text);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
