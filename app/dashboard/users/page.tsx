@@ -1,6 +1,7 @@
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
+import Image from "next/image";
 import Link from "next/link";
 
 const UsersPage = async () => {
@@ -23,8 +24,34 @@ const UsersPage = async () => {
             <td>Action</td>
           </tr>
         </thead>
-        <tbody></tbody>
-
+        <tbody>
+            <tr>
+              <td>
+                <div className={styles.user}>
+                  <Image
+                    src="/noavatar.png"
+                    alt=""
+                    width={40}
+                    height={40}
+                    className={styles.userImage}
+                  />
+                  John Doe
+                </div>
+              </td>
+              <td>joe@mail.ru</td>
+              <td>12.01.2010</td>
+              <td>Admin</td>
+              <td>active</td>
+              <td>
+                <div className={styles.buttons}>
+                  <Link href={`/dashboard/users/test`}>
+                    <button className={`${styles.button} ${styles.view}`}>View</button>
+                  </Link>
+									<button className={`${styles.button} ${styles.view}`}>Delete</button>
+                </div>
+              </td>
+            </tr>
+        </tbody>
       </table>
       <Pagination count={1} />
     </div>
