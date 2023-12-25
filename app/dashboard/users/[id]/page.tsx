@@ -19,7 +19,7 @@ const SingleUserPage = async () => {
           <label>Email</label>
           <input type="email" name="email" placeholder="John@mail.ru"/>
           <label>Password</label>
-          <input type="password" name="qwqwq"/>
+          <input type="password" name="password"/>
           <label>Phone</label>
           <input type="text" name="phone" placeholder="+122334"/>
           <label>Address</label>
