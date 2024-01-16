@@ -14,8 +14,6 @@ export const connectToDB = async () =>{
 			connection.isConnected = db.connections[0].readyState;
 		}
 	} catch (e) {
-		console.log(process.env.MONGO)
-		console.log(e)
 		throw new Error((e as Error).message);
 	}
 }
