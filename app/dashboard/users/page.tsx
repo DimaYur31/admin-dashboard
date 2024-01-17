@@ -4,12 +4,16 @@ import { fetchUsers } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
+import { SearchParams } from "@/app/types/types";
 
-const UsersPage = async ({searchParams}:{q:string}) => {
-	console.log(searchParams)
+
+
+const UsersPage = async ({searchParams}:SearchParams) => {
 	const q = searchParams?.q || '';
-	const users = await fetchUsers(q);
-  return (
+	const page = searchParams?.page || '1';
+	const {count, users} = await fetchUsers(q, page);
+  
+	return (
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Search for a user..." />
@@ -59,7 +63,7 @@ const UsersPage = async ({searchParams}:{q:string}) => {
 					))}
         </tbody>
       </table>
-      <Pagination count={1} />
+      <Pagination count={count} />
     </div>
   );
 };
