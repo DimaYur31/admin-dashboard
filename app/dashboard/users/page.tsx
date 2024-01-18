@@ -6,8 +6,6 @@ import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import { SearchParams } from "@/app/types/types";
 
-
-
 const UsersPage = async ({searchParams}:SearchParams) => {
 	const q = searchParams?.q || '';
 	const page = searchParams?.page || '1';
