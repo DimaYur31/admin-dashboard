@@ -1,15 +1,17 @@
 import styles from "@/app/ui/dashboard/users/singleUser/singleUser.module.css";
 import Image from "next/image";
+type ParamsType = {id: string}
 
-const SingleUserPage = async () => {
-
+const SingleUserPage = async ({params}:{params:ParamsType}) => {
+	const {id} = params;
+	console.log(params)
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.imgContainer}>
           <Image src="/noavatar.png" alt="" fill />
         </div>
-       Jon Doe
+      Jon Doe
       </div>
       <div className={styles.formContainer}>
         <form>

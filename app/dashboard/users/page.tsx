@@ -5,6 +5,7 @@ import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import Search from "@/app/ui/dashboard/search/search";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import { SearchParams } from "@/app/types/types";
+import { deleteUser } from "@/app/lib/actions";
 
 const UsersPage = async ({searchParams}:SearchParams) => {
 	const q = searchParams?.q || '';
@@ -54,7 +55,10 @@ const UsersPage = async ({searchParams}:SearchParams) => {
 								<Link href={`/dashboard/users/${user.id}`}>
 									<button className={`${styles.button} ${styles.view}`}>View</button>
 								</Link>
-								<button className={`${styles.button} ${styles.view}`}>Delete</button>
+								<form action={deleteUser}>
+									<input type="hidden" name="id" value={user.id}/>
+									<button className={`${styles.button} ${styles.view}`}>Delete</button>
+								</form>
 							</div>
 						</td>
 					</tr>
