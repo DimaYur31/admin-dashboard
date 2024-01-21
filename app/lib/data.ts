@@ -1,3 +1,4 @@
+import { UserType } from '../types/types';
 import {Product, User} from './models';
 import { connectToDB } from './utils';
 
@@ -16,8 +17,12 @@ export const fetchUsers = async (q:string, page: string) => {
 export const fetchOneUser = async (id: string) => {
 	try {
 		connectToDB();
-		const user = await User.findById(id);
-		return {user};
+		let user: UserType | null  = await User.findById(id);
+		if(user){
+			return {user};
+		} else {
+			throw new Error('Failed to fetch user!');
+		}
 	} catch (e) {
 		throw new Error('Failed to fetch user!');
 	}

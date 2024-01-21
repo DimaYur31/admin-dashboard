@@ -7,12 +7,14 @@ export type SearchParams = {
 		page: string;
 	}
 }
-// export type UserType = {
-// 	username: string,
-// 	email: string,
-// 	password: string,
-// 	phone: string, 
-// 	address: string, 
-// 	isAdmin: boolean,
-// 	isActive: boolean
-// }
+export type UserType = {
+	id:string,
+	img?: string,
+	username: string,
+	email: string,
+	password: string,
+	phone: string, 
+	address: string, 
+	isAdmin: string,
+	isActive: string
+}
