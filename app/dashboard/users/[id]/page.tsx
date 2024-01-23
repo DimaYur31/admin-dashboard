@@ -9,7 +9,7 @@ type ParamsType = {
 const SingleUserPage = async ({params}:{params:ParamsType}) => {
 	const {id} = params;
 	const {user} = await fetchOneUser(id);
-
+	
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>

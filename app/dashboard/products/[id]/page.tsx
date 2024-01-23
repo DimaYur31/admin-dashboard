@@ -8,6 +8,7 @@ type ParamsType = {
 const SingleProductPage = async ({params}:{params:ParamsType}) => {
 	const {id} = params;
 	const {product} = await fetchOneProduct(id);
+	
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
